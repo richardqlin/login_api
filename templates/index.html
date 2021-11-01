@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class ="entry">
+{% for entry in entries %}
+
+<h1>Title: {{ entry.title }}</h1>
+
+<p>Post: {{ entry.post}}</p>
+    <p>Time: {{ entry.time }}</p>
+     <p>Date: {{ entry.date }}</p>
+
+{% else %}
+<p>no data</p>
+
+{% endfor %}
+
+</div>
+<div class ="entry">
+<h1>Another Entry</h1>
+<p>Another post</p>
+
+</div>
+{% endblock %}
+
+</html>
