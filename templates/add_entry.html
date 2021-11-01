@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="entry">
+<form action="{{ url_for('add_entry') }}" method="post">
+	<div class="form-group">
+		<label for ="title" class="form-control">Title</label>
+		<input id="title" class="form-control" type ="text" name="title">
+	</div>
+	<div>
+		<label for="post" class="form-control">Post</label>
+		<textarea row="4"  id ="post" class="form-control"  type ="text"  name="post"></textarea>
+	</div>
+	<button type="submit" class="btn btn-success">Share</button>
+
+</form>
+</div>
+{% endblock %}
+
+
+
+</html>
